@@ -9,12 +9,13 @@ import javax.persistence.Persistence;
  * 
  * @author Michal Goly
  */
+
 public class DBUtil {
-   
-   private static final EntityManagerFactory emf = 
-           Persistence.createEntityManagerFactory("nsshopPU");
-   
-   public static EntityManagerFactory getEmFactory() {
-      return emf;
-   }
+	   
+	   private static final EntityManagerFactory emf = 
+	           Persistence.createEntityManagerFactory("nsshopPU");
+	   
+	   public static EntityManagerFactory getEmFactory() {
+	      return emf;
+	   }
 }

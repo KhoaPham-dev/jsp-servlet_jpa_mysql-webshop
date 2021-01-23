@@ -4,9 +4,6 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
-import javax.persistence.NoResultException;
-import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 import com.ns4finalproject.model.User;
 

@@ -38,8 +38,6 @@
       		
 			<p>Cách thức thực hiện cực đơn giản, dễ dàng, và nhanh chóng và có đầy đủ hướng dẫn sẽ tiết kiệm thời gian mua hàng của khách hàng.</p>
       		
-      		<p>Ngoài mua hàng thông qua website, khách hàng cũng có thể đặt hàng các sản phẩm của <strong>Nông Sản 24h</strong> qua Hotline: 19001234</p>
-      		<i>Hy vọng rằng với những kênh đặt hàng tiện lợi, đơn giản chúng tôi sẽ phục vụ khách hàng một cách nhanh nhất, hiệu quả nhất.</i>
       		<br><br/>
       	</div>
       </div>

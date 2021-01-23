@@ -1,13 +1,26 @@
 package com.ns4finalproject.model;
 
+
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Transactions {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+	
+	@OneToMany(mappedBy = "transaction", cascade = CascadeType.ALL)
+	private Collection<Ordered> ordereds;
+	
 	private String status;
 	private String user_session;
 	private String user_name;
@@ -23,8 +36,7 @@ public class Transactions {
 		
 	}
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public int getId() {
 		return id;
 	}

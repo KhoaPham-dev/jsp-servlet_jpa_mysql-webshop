@@ -1,8 +1,4 @@
-<%-- 
-    Document   : index
-    Created on : May 5, 2020, 10:57:00 PM
-    Author     : LENOVO
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
@@ -62,22 +58,6 @@
  </section>
  <!-- / Cart view section -->
 
-<!--  end content-->
-   <script>
-		var date = new Date();
-		
-		var day = date.getDate();
-		var month = date.getMonth() + 1;
-		var year = date.getFullYear();
-		
-		if (month < 10) month = "0" + month;
-		if (day < 10) day = "0" + day;
-		
-		var today = year + "-" + month + "-" + day;
-		
-		
-		document.getElementById('the-date').value = today;
-</script>
 <!--  footer-->
  <jsp:include page = "./footer/footer.jsp" flush = "true" />
 <!-- end footer-->

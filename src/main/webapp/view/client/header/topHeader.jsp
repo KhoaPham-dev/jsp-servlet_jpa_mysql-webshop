@@ -1,8 +1,4 @@
-<%-- 
-    Document   : topHeader
-    Created on : May 5, 2020, 11:13:25 PM
-    Author     : LENOVO
---%>
+
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
@@ -16,7 +12,7 @@
               <!-- start header top left -->
               <div class="aa-header-top-left">
                 <div class="cellphone hidden-xs">
-                  <p><span class="fas fa-home"></span>Website bán hàng nông sản</p>
+                  <p><span class="fas fa-home"></span>Website Nông sản 24h</p>
                 </div>
                 <!-- start language -->
                 <div class="aa-language">

@@ -1,13 +1,32 @@
 package com.ns4finalproject.model;
 
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
 public class Product {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
+	
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+	private Collection<Ordered> ordereds; 
+	
+	@OneToMany(mappedBy = "product", cascade = CascadeType.ALL)
+	private Collection<Review> reviews; 
+	
+	@ManyToOne
+	@PrimaryKeyJoinColumn (name= "catalog_id")
+	private Catalog catalog;
+	
 	private String catalog_id;
 	private String name;
 	private String price;
@@ -33,8 +52,7 @@ public class Product {
 		this.created = created;
 	}
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public String getId() {
 		return id;
 	}

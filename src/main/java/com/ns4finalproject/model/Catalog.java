@@ -1,13 +1,23 @@
 package com.ns4finalproject.model;
 
+import java.util.Collection;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Catalog {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
+	
+	@OneToMany(mappedBy = "catalog", cascade = CascadeType.ALL)
+	private Collection<Product> products; 
+	
 	private String name;
 	private String parent_id;
 	public Catalog() { }
@@ -18,8 +28,7 @@ public class Catalog {
 		this.parent_id = parent_id;
 	}
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public String getId() {
 		return id;
 	}

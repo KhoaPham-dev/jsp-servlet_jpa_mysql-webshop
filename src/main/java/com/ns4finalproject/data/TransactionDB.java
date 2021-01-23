@@ -31,9 +31,9 @@ public class TransactionDB{
 	public static void delete(String id) { 		
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
 	    EntityTransaction trans = em.getTransaction();
-		String queryString = "Delete from Transaction t where t.id = :id";
+		String queryString = "Delete from Transactions t where t.id = :id";
 		Query query = em.createQuery(queryString);
-	    query.setParameter("id", String.valueOf(id));
+	    query.setParameter("id", id);
 	    int count = 0;
 		try {
 			trans.begin();
@@ -48,7 +48,7 @@ public class TransactionDB{
 	
 	public static Transactions get(int id) {		
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
-		String queryString = "SELECT t FROM Transaction t WHERE t.id= :id";
+		String queryString = "SELECT t FROM Transactions t WHERE t.id= :id";
 		TypedQuery<Transactions> query = em.createQuery(queryString, Transactions.class);
 		query.setParameter("id", String.valueOf(id));
 		
@@ -86,7 +86,7 @@ public class TransactionDB{
   
 	public static List<Transactions> getAll() { 
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
-	      String queryString = "SELECT t FROM Transaction t";
+	      String queryString = "SELECT t FROM Transactions t";
 	      Query query = em.createQuery(queryString);
 	      
 	      List<Transactions> transactions = null;

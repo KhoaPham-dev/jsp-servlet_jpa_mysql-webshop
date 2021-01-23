@@ -33,7 +33,7 @@ public class UserDB{
 	    EntityTransaction trans = em.getTransaction();
 		String queryString = "Delete from User u where u.id = :id";
 		Query query = em.createQuery(queryString);
-	    query.setParameter("id", String.valueOf(id));
+	    query.setParameter("id", id);
 	    int count = 0;
 		try {
 			trans.begin();
@@ -56,7 +56,7 @@ public class UserDB{
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
 		String queryString = "SELECT u FROM User u WHERE u.id= :id";
 		TypedQuery<User> query = em.createQuery(queryString, User.class);
-		query.setParameter("id", String.valueOf(id));
+		query.setParameter("id", id);
 		
 		User user = null;
 		try {

@@ -1,6 +1,5 @@
 package com.ns4finalproject.model;
 
-import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,6 +7,8 @@ import javax.persistence.Id;
 
 @Entity
 public class Boardnew {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
 	private String title;
 	private String content;
@@ -27,8 +28,7 @@ public class Boardnew {
 		this.author = author;
 		this.created = created;
 	}
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public String getId() {
 		return id;
 	}

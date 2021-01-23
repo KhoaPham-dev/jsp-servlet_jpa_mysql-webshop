@@ -6,12 +6,21 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
 public class Review {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
 	private String name;
 	private String email;
+	
+	@ManyToOne
+	@PrimaryKeyJoinColumn (name= "product_id")
+	private Product product;
+	
 	private String product_id;
 	private String content;
 	private String created;
@@ -28,8 +37,7 @@ public class Review {
 		this.created = created;
 	}
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public String getId() {
 		return id;
 	}

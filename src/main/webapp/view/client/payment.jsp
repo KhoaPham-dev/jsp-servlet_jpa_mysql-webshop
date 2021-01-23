@@ -39,11 +39,10 @@
 			Số tài khoản: XXXXXXXX</p>
 			<strong>2.Ví điện tử MOMO: </strong>
 			<p style ="margin-left: 20px;">Tên: XXXXXXXXX<br>
-			Số điện thoại: 0904974XXX</p>
+			Số điện thoại: XXXXXXXXX</p>
 			<strong>3.Ví điện tử ZaloPay: </strong>
 			<p style ="margin-left: 20px;">Tên: XXXXXXXXX<br>
-			Số điện thoại: 0904974XXX</p>
-			<i>Sau khi thanh toán, nếu gặp bất kì sự cố nào vui lòng liên hệ tới số Hotline 19001234</i><br><br>
+			Số điện thoại: XXXXXXXXX</p>
       	</div>
       </div>
      </div>

@@ -1,8 +1,3 @@
-<%-- 
-    Document   : bottomHeader
-    Created on : May 5, 2020, 11:14:19 PM
-    Author     : LENOVO
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
@@ -36,7 +31,7 @@
                   <a class="aa-shipping-boxsmall">
                       <span class="aa-shipping-boxsmall-icon fas fa-phone"></span>
                       <span class="aa-shipping-box-text">
-                          <div class="aa-shipping-title">Hỗ trợ: 037.7026.186</div>
+                          <div class="aa-shipping-title">Hỗ trợ: 092.395.7050</div>
                           <div class="">Tư vấn 24/7 miễn phí</div>
                       </span>
                       

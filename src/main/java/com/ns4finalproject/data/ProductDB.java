@@ -124,8 +124,7 @@ public class ProductDB {
 		EntityManager em = DBUtil.getEmFactory().createEntityManager();
 		String queryString = "SELECT p FROM Product p WHERE p.name LIKE :keyword";
 		TypedQuery<Product> query = em.createQuery(queryString, Product.class);
-		query.setParameter("keyword", keyword);
-		
+		query.setParameter("keyword", "%" + keyword + "%");
 		List<Product> products = null;
 		try {
 			products = query.getResultList();

@@ -4,12 +4,29 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 
 @Entity
 public class Ordered {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private String id;
+	
+	@ManyToOne
+	@PrimaryKeyJoinColumn (name= "product_id")
+	private Product product;
+	
 	private String product_id;
+	
+	@ManyToOne 
+	@PrimaryKeyJoinColumn (name= "transaction_id")
+	private Transactions transaction;
+	
 	private String transaction_id;
+	
 	private int qty;
 	public Ordered() {
 		super();
@@ -22,8 +39,7 @@ public class Ordered {
 		this.qty = qty;
 	}
 	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	
 	public String getId() {
 		return id;
 	}
